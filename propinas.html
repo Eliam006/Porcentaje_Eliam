@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propinas</title>
+</head>
+<input>
+    <input type="number" id="monto">Ingrese el monto total
+    <input type="number" id="porcentaje">Ingrese el porcentaje que desea
+    <button onclick="calcular()">Calcular propina</button>
+    <div id="propina">
+        <p id="propina2"></p>
+    </div>
+
+    <script>
+        function calcular() {
+            const monto = parseFloat(document.getElementById("monto").value)
+            const porcentaje = parseFloat(document.getElementById("porcentaje").value)
+            console.log(monto);
+
+            console.log(monto);
+            
+
+            const propina = (monto * (porcentaje)) / 100
+
+            console.log(propina);
+            const container = document.getElementById("propina")
+            const mensaje = "La propina que debe de dejar es de: "+ propina
+
+            document.getElementById("propina2").innerText = mensaje;
+            
+        }
+    </script>
+</body>
+</html>
